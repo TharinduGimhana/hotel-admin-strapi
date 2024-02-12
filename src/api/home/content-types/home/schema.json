@@ -12,7 +12,7 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "mainlogo": {
+    "logomain": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -33,6 +33,105 @@
         "videos",
         "audios"
       ]
+    },
+    "logosecond": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "subtitleBannerOne": {
+      "type": "string",
+      "required": true
+    },
+    "titleBannerOne": {
+      "type": "string",
+      "required": true
+    },
+    "textBannerOne": {
+      "type": "string",
+      "required": true
+    },
+    "subtitleBannerTwo": {
+      "type": "string",
+      "required": true
+    },
+    "titleBannerTwo": {
+      "type": "string",
+      "required": true
+    },
+    "textBannerTwo": {
+      "type": "string",
+      "required": true
+    },
+    "subtitleBannerThree": {
+      "type": "string",
+      "required": true
+    },
+    "titleBannerThree": {
+      "type": "string",
+      "required": true
+    },
+    "textBannerThree": {
+      "type": "string",
+      "required": true
+    },
+    "btnBanner": {
+      "type": "string",
+      "required": true
+    },
+    "starRate": {
+      "type": "string"
+    },
+    "topicHistory": {
+      "type": "string"
+    },
+    "subTopicHistory": {
+      "type": "string"
+    },
+    "contentHistory": {
+      "type": "text"
+    },
+    "signature": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "about": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "circleText": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "endTextHistory": {
+      "type": "string"
     }
   }
 }
