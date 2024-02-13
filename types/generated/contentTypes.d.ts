@@ -362,80 +362,6 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
-export interface ApiHomeHome extends Schema.CollectionType {
-  collectionName: 'homes';
-  info: {
-    singularName: 'home';
-    pluralName: 'homes';
-    displayName: 'home';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    logomain: Attribute.Media;
-    backgroundimages: Attribute.Media;
-    logosecond: Attribute.Media;
-    subtitleBannerOne: Attribute.String & Attribute.Required;
-    titleBannerOne: Attribute.String & Attribute.Required;
-    textBannerOne: Attribute.String & Attribute.Required;
-    subtitleBannerTwo: Attribute.String & Attribute.Required;
-    titleBannerTwo: Attribute.String & Attribute.Required;
-    textBannerTwo: Attribute.String & Attribute.Required;
-    subtitleBannerThree: Attribute.String & Attribute.Required;
-    titleBannerThree: Attribute.String & Attribute.Required;
-    textBannerThree: Attribute.String & Attribute.Required;
-    btnBanner: Attribute.String & Attribute.Required;
-    starRate: Attribute.String;
-    topicHistory: Attribute.String;
-    subTopicHistory: Attribute.String;
-    contentHistory: Attribute.Text;
-    signature: Attribute.Media;
-    about: Attribute.Media;
-    circleText: Attribute.Media;
-    endTextHistory: Attribute.String;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<'api::home.home', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<'api::home.home', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-  };
-}
-
-export interface ApiServiceService extends Schema.CollectionType {
-  collectionName: 'services';
-  info: {
-    singularName: 'service';
-    pluralName: 'services';
-    displayName: 'Service';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    MainTopic: Attribute.String;
-    ShortDescription: Attribute.Text;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::service.service',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::service.service',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface PluginUploadFile extends Schema.CollectionType {
   collectionName: 'files';
   info: {
@@ -855,6 +781,119 @@ export interface PluginI18NLocale extends Schema.CollectionType {
   };
 }
 
+export interface ApiGalleryGallery extends Schema.CollectionType {
+  collectionName: 'galleries';
+  info: {
+    singularName: 'gallery';
+    pluralName: 'galleries';
+    displayName: 'Gallery';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    image: Attribute.Media & Attribute.Required;
+    title: Attribute.String;
+    text: Attribute.String;
+    rating: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::gallery.gallery',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::gallery.gallery',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiHomeHome extends Schema.CollectionType {
+  collectionName: 'homes';
+  info: {
+    singularName: 'home';
+    pluralName: 'homes';
+    displayName: 'home';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    logomain: Attribute.Media;
+    backgroundimages: Attribute.Media;
+    logosecond: Attribute.Media;
+    subtitleBannerOne: Attribute.String & Attribute.Required;
+    titleBannerOne: Attribute.String & Attribute.Required;
+    textBannerOne: Attribute.String & Attribute.Required;
+    subtitleBannerTwo: Attribute.String & Attribute.Required;
+    titleBannerTwo: Attribute.String & Attribute.Required;
+    textBannerTwo: Attribute.String & Attribute.Required;
+    subtitleBannerThree: Attribute.String & Attribute.Required;
+    titleBannerThree: Attribute.String & Attribute.Required;
+    textBannerThree: Attribute.String & Attribute.Required;
+    btnBanner: Attribute.String & Attribute.Required;
+    starRate: Attribute.String;
+    topicHistory: Attribute.String;
+    subTopicHistory: Attribute.String;
+    contentHistory: Attribute.Text;
+    signature: Attribute.Media;
+    about: Attribute.Media;
+    circleText: Attribute.Media;
+    endTextHistory: Attribute.String;
+    subTitleGal: Attribute.String;
+    secTitleGal: Attribute.String;
+    roomCatOne: Attribute.String;
+    roomCatTwo: Attribute.String;
+    roomCatThree: Attribute.String;
+    roomCatFour: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::home.home', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::home.home', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
+export interface ApiServiceService extends Schema.CollectionType {
+  collectionName: 'services';
+  info: {
+    singularName: 'service';
+    pluralName: 'services';
+    displayName: 'Service';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    MainTopic: Attribute.String;
+    ShortDescription: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::service.service',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::service.service',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -865,8 +904,6 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
-      'api::home.home': ApiHomeHome;
-      'api::service.service': ApiServiceService;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::content-releases.release': PluginContentReleasesRelease;
@@ -875,6 +912,9 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
+      'api::gallery.gallery': ApiGalleryGallery;
+      'api::home.home': ApiHomeHome;
+      'api::service.service': ApiServiceService;
     }
   }
 }

@@ -132,6 +132,24 @@
     },
     "endTextHistory": {
       "type": "string"
+    },
+    "subTitleGal": {
+      "type": "string"
+    },
+    "secTitleGal": {
+      "type": "string"
+    },
+    "roomCatOne": {
+      "type": "string"
+    },
+    "roomCatTwo": {
+      "type": "string"
+    },
+    "roomCatThree": {
+      "type": "string"
+    },
+    "roomCatFour": {
+      "type": "string"
     }
   }
 }
